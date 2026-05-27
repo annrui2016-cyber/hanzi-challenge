@@ -153,11 +153,22 @@
   .qcount-btn.sel .sub{color:var(--lime);opacity:.7;}
 
   /* 级别徽章 + 下拉框 */
-  .level-badge{
-    display:inline-block;font-family:'Orbitron';font-size:clamp(11px,2.3vw,13px);font-weight:700;letter-spacing:1px;
-    color:var(--lime);background:rgba(157,255,60,.08);border:1px solid rgba(157,255,60,.35);
-    border-radius:999px;padding:5px 14px;margin-bottom:16px;box-shadow:0 0 14px rgba(157,255,60,.15);
+  .game-desc{
+    font-family:'Rajdhani',sans-serif;
+    font-size:clamp(12px,2.3vw,15px);font-weight:500;
+    color:var(--txt-dim);letter-spacing:.5px;
+    margin-bottom:16px;font-style:italic;
   }
+
+  #footer{
+    position:fixed;bottom:0;left:0;right:0;
+    text-align:center;
+    font-family:'Rajdhani',sans-serif;
+    font-size:11px;color:rgba(107,134,176,.45);
+    padding:6px;letter-spacing:.5px;
+    pointer-events:none;z-index:4;
+  }
+  #footer span{color:rgba(34,224,255,.45);}
   .level-label{font-family:'Orbitron';font-size:clamp(11px,2.3vw,13px);color:var(--txt-dim);letter-spacing:2px;margin-bottom:8px;text-align:left;}
   .level-sel{position:relative;margin-bottom:18px;}
   #levelSelect{
@@ -210,7 +221,7 @@
     <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
     <h1>解码挑战</h1>
     <div class="tagline">HANZI DECODE CHALLENGE</div>
-    <div class="level-badge">⬢ HSK 3.0 · 一级汉字 LEVEL 1</div>
+    <div class="game-desc">A free game to practice Chinese character recognition — strokes, radicals &amp; structure</div>
     <div class="brief">
       ⬡ 下拉页面可<b>自选答题时间和题量</b><br>
       <span class="en">Scroll down to set <b>time & number of questions</b></span><br>
@@ -661,5 +672,7 @@ document.getElementById('confirmExitBtn').addEventListener('click',()=>{
   document.getElementById('startScreen').classList.remove('hidden');
 });
 </script>
+<div id="footer">Part of <span>Mandarin Path</span> · Free Chinese learning tools for international learners · 2026</div>
+
 </body>
 </html>
